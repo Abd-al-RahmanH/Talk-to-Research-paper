@@ -207,7 +207,7 @@ def main():
             original_list=call_model_flan(user_question)
             unique_list = list(set(original_list))
             topic = ' '.join(unique_list)  # full topic creation
-        with st.spinner("Searching in ArXiv: "+topic):
+        with st.spinner("Searching in Database: "+topic):
             downloaded_files , titles =arxiv_search(topic)
         with st.spinner("Vectorizing results"):
             # Get PDF text and split into chunks
