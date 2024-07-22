@@ -199,7 +199,7 @@ def main():
         st.session_state.conversation = None
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
-    st.header("Chat for Research papers :books:")
+    st.header("Chat with Research papers :books:")
     user_question = st.text_input("Ask questions to research paper or upload your documents:") 
     
     if st.button("Search") and user_question:      
@@ -232,7 +232,10 @@ def main():
         st.subheader("Your documents")
         pdf_docs = st.file_uploader("Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
         if not pdf_docs:
-            st.write('You can add your document')
+            st.write('You can add your document')/n
+            st.write('<br>')  # For an empty line
+            st.write('<br>')
+            st.write('Developed By RAHMAN')
         else:     
             if st.button("Process"):
                 with st.spinner("Processing"):
