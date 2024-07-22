@@ -159,7 +159,7 @@ def delete_files_in_temp():
             
 def arxiv_search(topic):
     import arxiv
-    print("Searching on Arxiv: '{}' ".format(topic))
+    print("Searching on Database: '{}' ".format(topic))
     # combinations of single topics
     titles = list()
     authors = list()
@@ -167,7 +167,7 @@ def arxiv_search(topic):
     pdf_url = list()
     search = arxiv.Search(
     query = topic,
-    max_results = 5,
+    max_results = 10,
     sort_by = arxiv.SortCriterion.Relevance
     #SubmittedDate #TODO Include it
     )
