@@ -232,7 +232,7 @@ def main():
         st.subheader("Your documents")
         pdf_docs = st.file_uploader("Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
         if not pdf_docs:
-            st.write('You can add your document')/n
+            st.write('You can add your document')
             st.write('<br>')  # For an empty line
             st.write('<br>')
             st.write('Developed By RAHMAN')
