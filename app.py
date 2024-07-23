@@ -1,5 +1,5 @@
 import streamlit as st
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
@@ -30,17 +30,17 @@ parameters = {
 
 
 load_dotenv()
-project_id = os.getenv("PROJECT_ID", None)
+project_id = "b1fef30c-1f4e-4a6d-b18e-9668fc26e48f"#os.getenv("PROJECT_ID", None)
 credentials = {
-        "url": "https://us-south.ml.cloud.ibm.com",
-        "apikey": os.getenv("API_KEY", None)
+        "url":"https://us-south.ml.cloud.ibm.com",
+        "apikey":"npESjQxL6c5-DpSyYRvQSPpqzN7FMZZ1TRKzOEccxxGq"#os.getenv("API_KEY", None)
         }    
 #this cell should never fail, and will produce no output
 import requests
 
 def getBearer(apikey):
     form = {'apikey': apikey, 'grant_type': "urn:ibm:params:oauth:grant-type:apikey"}
-    print("About to create bearer")
+    print("About to create bearer from Rahman's cloud")
 #    print(form)
     response = requests.post("https://iam.cloud.ibm.com/oidc/token", data = form)
     if response.status_code != 200:
@@ -50,7 +50,7 @@ def getBearer(apikey):
     if not json:
         print("Invalid/no JSON retrieving token")
         raise Exception("Failed to get token, invalid response")
-    print("Bearer retrieved")
+    print("Bearer retrieved from Rahman's cloud")
     return json.get("access_token")
 
 credentials["token"] = getBearer(credentials["apikey"])
