@@ -1,5 +1,5 @@
 import streamlit as st
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
@@ -30,10 +30,10 @@ parameters = {
 
 
 load_dotenv()
-project_id = "b1fef30c-1f4e-4a6d-b18e-9668fc26e48f"#os.getenv("PROJECT_ID", None)
+project_id =  os.getenv("PROJECT_ID", None)
 credentials = {
         "url":"https://us-south.ml.cloud.ibm.com",
-        "apikey":"npESjQxL6c5-DpSyYRvQSPpqzN7FMZZ1TRKzOEccxxGq"#os.getenv("API_KEY", None)
+        "apikey": os.getenv("API_KEY", None)
         }    
 #this cell should never fail, and will produce no output
 import requests
