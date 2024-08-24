@@ -25,7 +25,7 @@ parameters = {
     GenParams.MAX_NEW_TOKENS: 500,
     GenParams.MIN_NEW_TOKENS: 0,
     GenParams.STOP_SEQUENCES: ["\n"],
-    GenParams.REPETITION_PENALTY:2
+    GenParams.REPETITION_PENALTY:1
     }
 
 
@@ -167,7 +167,7 @@ def arxiv_search(topic):
     pdf_url = list()
     search = arxiv.Search(
     query = topic,
-    max_results = 5,
+    max_results = 7,
     sort_by = arxiv.SortCriterion.Relevance
     #SubmittedDate #TODO Include it
     )
