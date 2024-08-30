@@ -25,7 +25,7 @@ parameters = {
     GenParams.MAX_NEW_TOKENS: 500,
     GenParams.MIN_NEW_TOKENS: 0,
     GenParams.STOP_SEQUENCES: ["\n"],
-    GenParams.REPETITION_PENALTY:1
+    GenParams.REPETITION_PENALTY:2
     }
 
 
