@@ -167,7 +167,7 @@ def arxiv_search(topic):
     pdf_url = list()
     search = arxiv.Search(
     query = topic,
-    max_results = 6,
+    max_results = 5,
     sort_by = arxiv.SortCriterion.Relevance
     #SubmittedDate #TODO Include it
     )
