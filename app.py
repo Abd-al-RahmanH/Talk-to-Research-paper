@@ -117,7 +117,7 @@ def call_model_flan(question):
     
     # Initialize the Watsonx foundation model
     llm_model= Model(
-        model_id=ModelTypes['FLAN_T5_XXL'], 
+        model_id=ModelTypes['CODELLAMA_34B_INSTRUCT_HF'], 
         params=parameters, 
         credentials=credentials,
         project_id=project_id)
