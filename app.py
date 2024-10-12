@@ -117,7 +117,7 @@ def call_model_flan(question):
     
     # Initialize the Watsonx foundation model
     llm_model= Model(
-        model_id=ModelTypes['meta-llama/llama-3-70b-instruct'], 
+        model_id=ModelTypes['meta-llama/llama-3-405b-instruct'], 
         params=parameters, 
         credentials=credentials,
         project_id=project_id)
